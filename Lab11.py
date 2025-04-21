@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 
 def find_id(name):
-    file = open("../data/assignments.txt")
+    file = open("data/assignments.txt")
     lines = file.readlines()
     lines = [l.strip() for l in lines]
     for i in range(len(lines)):
@@ -11,7 +11,7 @@ def find_id(name):
     return 0
 
 def weight(id):
-    assignments = open("../data/assignments.txt").readlines()
+    assignments = open("data/assignments.txt").readlines()
     assignments = [a.strip() for a in assignments]
     for i in range(len(assignments)):
         if assignments[i] == str(id):
@@ -24,8 +24,8 @@ def calc_grade(id):
     #ID, if it does add the grade listed * assignment weight to the sum
     #grade is percentage + weight / 100. final grade is sum of these
     sum = 0
-    for submission in os.listdir("../data/submissions"):
-        with open(os.path.join("../data/submissions", submission)) as file:
+    for submission in os.listdir("data/submissions"):
+        with open(os.path.join("data/submissions", submission)) as file:
             #getting a list with int values of stud ID, assign. ID, and score as a %
             sublist = file.readline().strip().split("|")
             sublist = [int(s) for s in sublist]
@@ -38,8 +38,8 @@ def calc_stats(id):
     max = 0
     sum = 0
     count = 0
-    for submission in os.listdir("../data/submissions"):
-        with open(os.path.join("../data/submissions", submission)) as file:
+    for submission in os.listdir("data/submissions"):
+        with open(os.path.join("data/submissions", submission)) as file:
             # getting a list with int values of stud ID, assign. ID, and score as a %
             sublist = file.readline().strip().split("|")
             sublist = [int(s) for s in sublist]
@@ -55,8 +55,8 @@ def calc_stats(id):
 def list_scores(name):
     scores = []
     id = find_id(name)
-    for submission in os.listdir("../data/submissions"):
-        with open(os.path.join("../data/submissions", submission)) as file:
+    for submission in os.listdir("data/submissions"):
+        with open(os.path.join("data/submissions", submission)) as file:
             # getting a list with int values of stud ID, assign. ID, and score as a %
             sublist = file.readline().strip().split("|")
             sublist = [int(s) for s in sublist]
@@ -68,7 +68,7 @@ def list_scores(name):
 def main():
     print("1. Student Grade\n2. Assignment statistics\n3. Assignment graph")
 
-    file = open("../data/students.txt")
+    file = open("data/students.txt")
     names = file.read().split("\n")
     #making all the lists
     student_ids = [int(n[0:3])for n in names]
@@ -77,7 +77,7 @@ def main():
     for i in range(len(names)):
         students[names[i]] = student_ids[i]
 
-    file2 = open("../data/assignments.txt")
+    file2 = open("data/assignments.txt")
     assignments = file2.read().split("\n")
     assignments = [assignments[a] for a in range(0,len(assignments),3)]
 
