@@ -88,8 +88,6 @@ def main():
         if name not in students.keys():
             print("Student not found")
         else:
-            print("Working on it..")
-            print(students[name])
             print(f"{calc_grade(students[name]):.0f}%")
 
     elif option == 2:
