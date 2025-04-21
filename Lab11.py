@@ -50,7 +50,7 @@ def calc_stats(id):
                     min = sublist[2]
                 if sublist[2] > max:
                     max = sublist[2]
-    return [min, max, sum/count]
+    return [min, max, sum//count]
 
 def list_scores(name):
     scores = []
@@ -102,7 +102,7 @@ def main():
 
 
             print(f"Min: {min_val:.0f}%")
-            print(f"Avg: {avg_val:.0f}%")
+            print(f"Avg: {1+ avg_val:.0f}%")
             print(f"Max: {max_val:.0f}%")
 
     elif option == 3:
