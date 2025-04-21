@@ -50,7 +50,7 @@ def calc_stats(id):
                     min = sublist[2]
                 if sublist[2] > max:
                     max = sublist[2]
-    return [min, max, sum/count]
+    return [min, max, sum//count]
 
 def list_scores(name):
     scores = []
