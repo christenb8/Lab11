@@ -66,7 +66,7 @@ def list_scores(name):
 
 
 def main():
-    print("1. Student Grade\n2. Assignment statistics\n3. Assignment graph")
+    print("1. Student grade\n2. Assignment statistics\n3. Assignment graph")
 
     file = open("data/students.txt")
     names = file.read().split("\n")
