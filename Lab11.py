@@ -102,7 +102,7 @@ def main():
 
 
             print(f"Min: {min_val:.0f}%")
-            print(f"Avg: {1+ avg_val:.0f}%")
+            print(f"Avg: {avg_val:.0f}%")
             print(f"Max: {max_val:.0f}%")
 
     elif option == 3:
