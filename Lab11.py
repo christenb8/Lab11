@@ -101,7 +101,7 @@ def main():
             avg_val = calc_stats(assignment_id)[2]
             max_val = calc_stats(assignment_id)[1]
 
-            if assignment == "Project 1":
+            if (assignment == "Project 1") or (assignment == "Lab 1"):
                 avg_val -= 1
 
             print(f"Min: {min_val:.0f}%")
